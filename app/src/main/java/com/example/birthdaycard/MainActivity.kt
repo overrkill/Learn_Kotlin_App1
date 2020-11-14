@@ -1,10 +1,9 @@
 package com.example.birthdaycard
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 const val EXTRA_MESSAGE = "com.example.birthdaycard.MESSAGE"
 
@@ -15,11 +14,12 @@ class MainActivity : AppCompatActivity() {
     }
     fun doSomething(view : View) {
         // I meed to do something here
-        val editText = findViewById<TextView>(R.id.editText)
-        val message = editText.text.toString()
-        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE,message)
-        }
+//        val editText = findViewById<TextView>(R.id.editText)
+//        val message = editText.text.toString()
+        val intent = Intent(this, Dice::class.java)
+//            .apply {
+//            putExtra(EXTRA_MESSAGE,message)
+//        }
         startActivity(intent)
     }
 }
